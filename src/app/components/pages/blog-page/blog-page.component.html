@@ -15,19 +15,20 @@
 <div class="blog-area ptb-100">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a routerLink="/single-blog" class="d-block">
+            <div class="col-lg-8 col-md-12" >
+                <div class="row" >
+                    <div class="col-lg-6 col-md-6"   >
+                        <div class="single-blog-post mb-30" >
+                            <div class="post-image" *ngFor="let post of posts" >
+                                <a routerLink="/single-blog" class="d-block" >
                                     <img
-                                        src="assets/img/blog/blog1.jpg"
+                                        src="{{post.image}}"
                                         alt="image"
                                     />
                                 </a>
-                                <div class="tag">
-                                    <a routerLink="/blog-style-2">Learning</a>
+                                <div class="tag"  >
+                                    <a routerLink="/blog-style-2"   > </a>
+                
                                 </div>
                             </div>
                             <div class="post-content">
@@ -42,21 +43,19 @@
                                         <a
                                             routerLink="/blog-style-2"
                                             class="d-inline-block"
-                                            >Steven Smith</a
+                                            >Achraf Smith</a
                                         >
                                     </li>
                                     <li>
-                                        <a routerLink="/blog-style-2"
-                                            >August 30, 2019</a
+                                        <a  routerLink="/blog-style-2" *ngFor="let post of posts" 
+                                         >{{post.createDatePost}}</a
                                         >
                                     </li>
                                 </ul>
                                 <h3>
-                                    <a
-                                        routerLink="/single-blog"
-                                        class="d-inline-block"
-                                        >World largest elephant toothpaste
-                                        experiment in 2019</a
+                                    <a 
+                                        routerLink="/single-blog" *ngFor="let post of posts" 
+                                        class="d-inline-block" >{{ post.title }}</a
                                     >
                                 </h3>
                                 <a
@@ -170,263 +169,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a routerLink="/single-blog" class="d-block">
-                                    <img
-                                        src="assets/img/blog/blog4.jpg"
-                                        alt="image"
-                                    />
-                                </a>
-                                <div class="tag">
-                                    <a routerLink="/blog-style-2">Ideas</a>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li class="post-author">
-                                        <img
-                                            src="assets/img/user5.jpg"
-                                            class="d-inline-block rounded-circle mr-2"
-                                            alt="image"
-                                        />
-                                        By:
-                                        <a
-                                            routerLink="/blog-style-2"
-                                            class="d-inline-block"
-                                            >David Warner</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a routerLink="/blog-style-2"
-                                            >August 27, 2019</a
-                                        >
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a
-                                        routerLink="/single-blog"
-                                        class="d-inline-block"
-                                        >Global education: Ideas for the way
-                                        move forward</a
-                                    >
-                                </h3>
-                                <a
-                                    routerLink="/single-blog"
-                                    class="read-more-btn"
-                                    >Read More
-                                    <i class="bx bx-right-arrow-alt"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a routerLink="/single-blog" class="d-block">
-                                    <img
-                                        src="assets/img/blog/blog5.jpg"
-                                        alt="image"
-                                    />
-                                </a>
-                                <div class="tag">
-                                    <a routerLink="/blog-style-2">Workforce</a>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li class="post-author">
-                                        <img
-                                            src="assets/img/user6.jpg"
-                                            class="d-inline-block rounded-circle mr-2"
-                                            alt="image"
-                                        />
-                                        By:
-                                        <a
-                                            routerLink="/blog-style-2"
-                                            class="d-inline-block"
-                                            >Olivar Waise</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a routerLink="/blog-style-2"
-                                            >August 26, 2019</a
-                                        >
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a
-                                        routerLink="/single-blog"
-                                        class="d-inline-block"
-                                        >New report reimagines the broader
-                                        education workforce</a
-                                    >
-                                </h3>
-                                <a
-                                    routerLink="/single-blog"
-                                    class="read-more-btn"
-                                    >Read More
-                                    <i class="bx bx-right-arrow-alt"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a routerLink="/single-blog" class="d-block">
-                                    <img
-                                        src="assets/img/blog/blog6.jpg"
-                                        alt="image"
-                                    />
-                                </a>
-
-                                <div class="tag">
-                                    <a routerLink="/blog-style-2">Education</a>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li class="post-author">
-                                        <img
-                                            src="assets/img/user2.jpg"
-                                            class="d-inline-block rounded-circle mr-2"
-                                            alt="image"
-                                        />
-                                        By:
-                                        <a
-                                            routerLink="/blog-style-2"
-                                            class="d-inline-block"
-                                            >Lina D'Souja</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a routerLink="/blog-style-2"
-                                            >August 29, 2019</a
-                                        >
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a
-                                        routerLink="/single-blog"
-                                        class="d-inline-block"
-                                        >What’s Going On in This Picture? | Jan.
-                                        13, 2020</a
-                                    >
-                                </h3>
-                                <a
-                                    routerLink="/single-blog"
-                                    class="read-more-btn"
-                                    >Read More
-                                    <i class="bx bx-right-arrow-alt"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a routerLink="/single-blog" class="d-block">
-                                    <img
-                                        src="assets/img/blog/blog7.jpg"
-                                        alt="image"
-                                    />
-                                </a>
-
-                                <div class="tag">
-                                    <a routerLink="/blog-style-2">Learning</a>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li class="post-author">
-                                        <img
-                                            src="assets/img/user1.jpg"
-                                            class="d-inline-block rounded-circle mr-2"
-                                            alt="image"
-                                        />
-                                        By:
-                                        <a
-                                            routerLink="/blog-style-2"
-                                            class="d-inline-block"
-                                            >Steven Smith</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a routerLink="/blog-style-2"
-                                            >August 30, 2019</a
-                                        >
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a
-                                        routerLink="/single-blog"
-                                        class="d-inline-block"
-                                        >Connecting Math and Science to Reading
-                                        and Writing</a
-                                    >
-                                </h3>
-                                <a
-                                    routerLink="/single-blog"
-                                    class="read-more-btn"
-                                    >Read More
-                                    <i class="bx bx-right-arrow-alt"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a routerLink="/single-blog" class="d-block">
-                                    <img
-                                        src="assets/img/blog/blog8.jpg"
-                                        alt="image"
-                                    />
-                                </a>
-                                <div class="tag">
-                                    <a routerLink="/blog-style-2">Education</a>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                <ul class="post-meta">
-                                    <li class="post-author">
-                                        <img
-                                            src="assets/img/user2.jpg"
-                                            class="d-inline-block rounded-circle mr-2"
-                                            alt="image"
-                                        />
-                                        By:
-                                        <a
-                                            routerLink="/blog-style-2"
-                                            class="d-inline-block"
-                                            >Lina D'Souja</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a routerLink="/blog-style-2"
-                                            >August 29, 2019</a
-                                        >
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a
-                                        routerLink="/single-blog"
-                                        class="d-inline-block"
-                                        >How to Introduce Meditation to the High
-                                        School</a
-                                    >
-                                </h3>
-                                <a
-                                    routerLink="/single-blog"
-                                    class="read-more-btn"
-                                    >Read More
-                                    <i class="bx bx-right-arrow-alt"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="pagination-area text-center">
                             <span

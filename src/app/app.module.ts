@@ -31,8 +31,6 @@ import { OurValuesComponent } from './components/common/our-values/our-values.co
 import { InstructorsPageComponent } from './components/pages/instructors-page/instructors-page.component';
 import { InstructorsDetailsPageComponent } from './components/pages/instructors-details-page/instructors-details-page.component';
 import { GalleryPageComponent } from './components/pages/gallery-page/gallery-page.component';
-import { EventsPageComponent } from './components/pages/events-page/events-page.component';
-import { EventsDetailsPageComponent } from './components/pages/events-details-page/events-details-page.component';
 import { FeedbackPageComponent } from './components/pages/feedback-page/feedback-page.component';
 import { DonatePageComponent } from './components/pages/donate-page/donate-page.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
@@ -40,8 +38,6 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
 import { ErrorPageComponent } from './components/pages/error-page/error-page.component';
 import { ComingSoonPageComponent } from './components/pages/coming-soon-page/coming-soon-page.component';
-import { BlogPageComponent } from './components/pages/blog-page/blog-page.component';
-import { BlogDetailsPageComponent } from './components/pages/blog-details-page/blog-details-page.component';
 import { ProductsDetailsPageComponent } from './components/pages/products-details-page/products-details-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
@@ -70,7 +66,11 @@ import { HomeMainBannerComponent } from './components/pages/home-page/home-main-
 import { LanguageCategoryComponent } from './components/common/language-category/language-category.component';
 import { FreeTrialFormComponent } from './components/common/free-trial-form/free-trial-form.component';
 import { environment } from 'src/environments/environment';
-import { BaseUrlInterceptor } from './config/config.service';
+
+
+import { RouterModule } from '@angular/router';
+import { ForumModule } from './components/pages/forum/forum.module';
+
 
 @NgModule({
   declarations: [
@@ -92,8 +92,7 @@ import { BaseUrlInterceptor } from './config/config.service';
     InstructorsPageComponent,
     InstructorsDetailsPageComponent,
     GalleryPageComponent,
-    EventsPageComponent,
-    EventsDetailsPageComponent,
+   
     FeedbackPageComponent,
     DonatePageComponent,
     LoginPageComponent,
@@ -101,8 +100,6 @@ import { BaseUrlInterceptor } from './config/config.service';
     FaqPageComponent,
     ErrorPageComponent,
     ComingSoonPageComponent,
-    BlogPageComponent,
-    BlogDetailsPageComponent,
     ProductsDetailsPageComponent,
     CartPageComponent,
     CheckoutPageComponent,
@@ -119,7 +116,7 @@ import { BaseUrlInterceptor } from './config/config.service';
     HomeBlogComponent,
     HomeEventsComponent,
     HomeCoursesComponent,
-    HeaderStyleComponent,
+    
     HomePageComponent,
     LanguageSubscribeComponent,
     FreeTrialComponent,
@@ -130,6 +127,7 @@ import { BaseUrlInterceptor } from './config/config.service';
     HomeMainBannerComponent,
     LanguageCategoryComponent,
     FreeTrialFormComponent,
+   
   ],
   imports: [
     HttpClientModule,
@@ -144,10 +142,15 @@ import { BaseUrlInterceptor } from './config/config.service';
     LightboxModule,
     FormsModule,
     AccordionModule,
-    LightgalleryModule
+    LightgalleryModule,
+    RouterModule,
+    ForumModule
+    
+    
   ],
+  //exports:[HeaderStyleComponent],
     providers: [
-      { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true },
+     
       { provide: "BASE_API_URL", useValue: environment.apiUrl }
 ],
   bootstrap: [AppComponent]

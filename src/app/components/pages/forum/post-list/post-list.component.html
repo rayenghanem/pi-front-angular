@@ -1,0 +1,57 @@
+<app-header-style></app-header-style>
+<div class="container" style="z-index: 1;">
+    <div class="row">
+      <hr />
+      <div class="col-md-9">
+        <div class="row post" *ngFor="let p of posts">
+          <div class="col-md-1">
+            <app-vote-button [post]="post"></app-vote-button>
+          </div>
+          <div class="col-md-11">
+            <span>
+              <span class="subreddit-text"><a class="post-url" href="">{{p.subject}}</a></span>
+              <span> . Posted
+                <span> {{p.createDate}} </span>
+                by              
+                <a class="username" href="">{{p.user.name}}</a>
+              </span>
+            </span>
+            <hr />
+            <a routerLink="post.url" class="post-title">{{p.title}}</a>
+            <div>
+              <p class="post-text" [innerHtml]="p.description"></p>
+            </div>
+            
+        
+            <!-- <div style="margin-top: 60px;" *ngFor="let comment of comments">
+              <div class="comment">
+                <div class="username">
+                  <a routerLink="/user/comment.username">{{comment.userName}}</a>
+                </div>
+                <div>
+                  <p>{{comment.duration}}</p>
+                </div>
+                <b>{{comment.text}}</b>
+              </div>
+              <hr />
+            </div> -->
+          </div>
+          <div class="col-md-1">
+            
+          </div>
+          <div class="col-md-11">
+            <div class="post-comment">
+                <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                    <textarea class="form-control" [formControlName]="'description'" placeholder="Your Thoughts?"></textarea>
+                  </div>
+                  <button type="submit" class="login float-right">Comment</button>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>

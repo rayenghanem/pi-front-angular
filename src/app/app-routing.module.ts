@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutPagComponent } from './components/pages/about-page/about-page.component';
 import { InstructorsPageComponent } from './components/pages/instructors-page/instructors-page.component';
 import { InstructorsDetailsPageComponent } from './components/pages/instructors-details-page/instructors-details-page.component';
-import { EventsPageComponent } from './components/pages/events-page/events-page.component';
-import { EventsDetailsPageComponent } from './components/pages/events-details-page/events-details-page.component';
 import { GalleryPageComponent } from './components/pages/gallery-page/gallery-page.component';
 import { FeedbackPageComponent } from './components/pages/feedback-page/feedback-page.component';
 import { DonatePageComponent } from './components/pages/donate-page/donate-page.component';
@@ -13,8 +11,6 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
 import { ErrorPageComponent } from './components/pages/error-page/error-page.component';
 import { ComingSoonPageComponent } from './components/pages/coming-soon-page/coming-soon-page.component';
-import { BlogPageComponent } from './components/pages/blog-page/blog-page.component';
-import { BlogDetailsPageComponent } from './components/pages/blog-details-page/blog-details-page.component';
 import { ProductsDetailsPageComponent } from './components/pages/products-details-page/products-details-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
@@ -36,8 +32,6 @@ const routes: Routes = [
     {path: 'instructor', component: InstructorsPageComponent},
     {path: 'single-instructor', component: InstructorsDetailsPageComponent},
     {path: 'gallery', component: GalleryPageComponent},
-    {path: 'events', component: EventsPageComponent},
-    {path: 'single-events', component: EventsDetailsPageComponent},
     {path: 'feedback', component: FeedbackPageComponent},
     {path: 'donate', component: DonatePageComponent},
     {path: 'login', component: LoginPageComponent},
@@ -54,12 +48,12 @@ const routes: Routes = [
     {path: 'edit-account', component: EditAccountPageComponent},
     {path: 'edit-billing-address', component: EditBillingAddressPageComponent},
     {path: 'edit-shipping-address', component: EditShippingAddressPageComponent},
-    {path: 'blog', component: BlogPageComponent},
-    {path: 'single-blog', component: BlogDetailsPageComponent},
     {path: 'single-products', component: ProductsDetailsPageComponent},
     {path: 'cart', component: CartPageComponent},
     {path: 'checkout', component: CheckoutPageComponent},
     {path: 'claim', component: ClaimPageComponent},
+    {path:'forum',loadChildren: () => import('./components/pages/forum/forum.module')
+            .then(m => m.ForumModule)},
     // Here add new pages component
 
     {path: '**', component: ErrorPageComponent} // This line will remain down from the whole pages component list
